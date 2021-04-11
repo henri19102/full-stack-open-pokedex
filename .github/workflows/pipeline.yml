@@ -34,3 +34,4 @@ jobs:
           heroku_email: "henri19102@student.hamk.fi"
           healthcheck: "http://pokedexapp-fullstackopen.herokuapp.com/health"
           checkstring: "ok"
+          rollbackonhealthcheckfailed: true
