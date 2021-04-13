@@ -53,10 +53,9 @@ jobs:
           status: custom
           fields: repo,message,took,author
           payload: | 
-          {
-            text: 'a new version deployed to https://pokedexapp-fullstackopen.herokuapp.com/'
-          }
-      
+            {
+              text: 'a new version deployed to https://pokedexapp-fullstackopen.herokuapp.com/'
+            }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         if:  ${{ github.event_name == 'push' && !contains(join(github.event.commits.*.message, ' '), '#skip') && success() }}
