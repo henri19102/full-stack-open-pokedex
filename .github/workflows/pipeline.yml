@@ -52,7 +52,7 @@ jobs:
         with:
           status: custom
           fields: repo,message,took,author
-          payload: | 
+          custom_payload: | 
             {
               text: 'a new version deployed to https://pokedexapp-fullstackopen.herokuapp.com/'
             }
