@@ -20,5 +20,9 @@ jobs:
         run: echo "$COMMITS"
       - name: commit messages
         env:
-          COMMIT_MESSAGES: ${{ github.event.commits[0].message }}
+          COMMIT_MESSAGES: ${{ toJson(github.event.commits.*.message) }}
         run: echo "$COMMIT_MESSAGES"
+      - name: skip deploy and tag commit message
+        env:
+          COMMIT_SKIP: ${{ contains(github.event.commits[0].message), '#skip') }}
+        run: echo "$COMMIT_SKIP"
