@@ -15,5 +15,5 @@ app.get('/version', (req, res) => {
 })
 
 app.listen(PORT, () => {
-  console.log('server started on port 5000') // eslint-disable-line
+  console.log('server started on port 5000') 
 })
